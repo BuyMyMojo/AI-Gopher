@@ -277,8 +277,8 @@ func init() {
 	// Setup flags
 	consumerKey := flag.String("k", "", "Your consumer key [Required]")
 	consumerSecret := flag.String("s", "", "Your consumer secret [Required]")
-	accessToken := flag.String("at", "", "Your consumer key [Required]")
-	accessSecret := flag.String("as", "", "Your consumer secret [Required]")
+	accessToken := flag.String("at", "", "Your Access token [Required]")
+	accessSecret := flag.String("as", "", "Your Access secret [Required]")
 	gpt3Key := flag.String("g", "", "Your GPT3 api key [Required]")
 
 	flag.Parse()
@@ -294,7 +294,7 @@ func init() {
 		fmt.Println("You muster enter a Access Token with -at <Access Token>")
 		os.Exit(3)
 	} else if *accessSecret == "" {
-		fmt.Println("You muster enter a Access Secret with -at <Access Secret>")
+		fmt.Println("You muster enter a Access Secret with -as <Access Secret>")
 		os.Exit(4)
 	} else if *gpt3Key == "" {
 		fmt.Println("You muster enter a GPT3/OpenAI api key with -g <Api key>")
